@@ -1,0 +1,27 @@
+.eunit
+*.o
+*.beam
+*.plt
+*.swp
+*.swo
+*.iml
+*~
+_*
+erl_crash.dump
+.concrete/DEV_MODE
+.erlang.cookie
+.idea
+log
+logs
+
+# rebar 2.x
+.rebar
+rel/example_project
+ebin/*.beam
+deps
+
+# rebar 3
+.rebar3
+_build/
+_checkouts/
+rebar3.crashdump

@@ -1,0 +1,29 @@
+%%-----------------------------------------------------------------------------
+%% tables for driving cron by erlang
+%%
+%% please see also crontab(5) : man 5 crontab
+%%
+%% The time and date fields are
+%%
+%%      field          allowed values
+%%      -----          --------------
+%%      minute         0-59
+%%      hour           0-23
+%%      day of month   1-31
+%%      month          1-12
+%%      day of week    1-7 (7 is Sunday)
+%%
+%%
+%% Format:
+%%
+%% {{m, h, dom, mon, dow}, {M, F, A}}
+%% M:F(A) is excuted in a new erlang process
+%%
+%% Some exampls:
+%% {{0, 2, "*", "*", "*"}, {io, format, ["hello early morning in beijing"]}}. 
+%% {{"*", "*", "*", "*", "*"}, {io, format, ["hello message by crontab 1\n"]}}.
+%% {{2, "2-5", "1-31/2", "1,3-5,7-12/3", "*/2"}, {io, format, ["hello message by crontab 3\n"]}}.
+%%
+%%-----------------------------------------------------------------------------
+
+
